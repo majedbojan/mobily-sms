@@ -9,23 +9,24 @@ Gem::Specification.new do |spec|
   spec.authors       = ["MaJeD BoJaN"]
   spec.email         = ["bojanmajed@gmail.com"]
 
-  spec.summary       = %q{integrate with mobilyws .}
-  spec.description   = %q{ This will help developers to integrate with mobilews service }
-  spec.homepage      = ""
+  spec.summary       = 'integrate with mobilyws'
+  spec.description   = 'This will help developers to integrate with mobilews service '0
+  spec.homepage      = 'https://github.com/MajedBojan/mobily-sms'
   spec.license       = "MIT"
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
+  # # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
+  # # to allow pushing to a single host or delete this section to allow pushing to any host.
+  # if spec.respond_to?(:metadata)
+  #   spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
+  # else
+  #   raise "RubyGems 2.0 or newer is required to protect against " \
+  #     "public gem pushes."
+  # end
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
   end
+
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
