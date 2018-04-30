@@ -1,10 +1,10 @@
 require "mobily/sms/version"
-require_relative 'mobily/mobily_api_auth'
-require_relative 'mobily/mobily_account'
-require_relative 'mobily/mobily_sms'
-require_relative 'mobily/mobily_formatted_sms'
-require_relative 'mobily/mobily_sender'
-require_relative 'mobily/mobily_api_error'
+require_relative 'mobily_api_auth'
+require_relative 'mobily_account'
+require_relative 'mobily_sms'
+require_relative 'mobily_formatted_sms'
+require_relative 'mobily_sender'
+require_relative 'mobily_api_error'
 
 class Sms
 
