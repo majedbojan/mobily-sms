@@ -10,9 +10,8 @@ Gem::Specification.new do |spec|
   spec.email         = ["bojanmajed@gmail.com"]
 
   spec.summary       = %q{integrate with mobilyws .}
-  spec.description   = %q{mobily-sms integrated with mobilyws api's offers a SMS Gateway service “SMS A P I ”, that allows you easily connect Send-SMS service with your
-applications, websites, or any kind of systems that you may have}
-  spec.homepage      = "This gem will make your integration with mobilyws easier, In order to use mobily.ws API, you should have a Mobily.ws account from this link: http://mobily.ws/sms/index.php, "
+  spec.description   = %q{ This will help developers to integrate with mobilews service }
+  spec.homepage      = ""
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
