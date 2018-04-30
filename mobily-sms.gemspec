@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["bojanmajed@gmail.com"]
 
   spec.summary       = 'integrate with mobilyws'
-  spec.description   = 'This will help developers to integrate with mobilews service '0
+  spec.description   = 'This will help developers to integrate with mobilews service'
   spec.homepage      = 'https://github.com/MajedBojan/mobily-sms'
   spec.license       = "MIT"
 
