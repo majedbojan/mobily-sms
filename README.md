@@ -1,8 +1,8 @@
 # Mobily::Sms
 
-mobily-sms gem to integrate with [Mobilyws](http://mobily.ws/sms/index.php) api's. mobilyws offers a SMS Gateway service "SMS A P I ", that allows you easily connect Send-SMS service with your applications, websites, or any kind of systems that you may have
+mobily-sms gem used to integrate with [Mobilyws](http://mobily.ws/sms/index.php) api's. mobilyws offers a SMS Gateway service "SMS API", that allows you easily connect Send-SMS service with your applications, websites, or any kind of systems that you may have
 
-This gem will make your integration with mobilyws easier, In order to use mobily.ws API, you should have a Mobily.ws account from [Mobilyws](http://mobily.ws/sms/index.php).
+This gem will make your integration with [Mobilyws](http://mobily.ws/sms/index.php) easier, In order to use mobily.ws API, you should have a Mobily.ws account from [Mobilyws](http://mobily.ws/sms/index.php).
 
 ## Installation
 
