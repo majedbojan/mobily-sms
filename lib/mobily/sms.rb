@@ -1,4 +1,6 @@
-require "mobily/sms/version"
+require 'mobily/sms/version'
+# require 'configuration'
+
 require_relative 'mobily_api_auth'
 require_relative 'mobily_account'
 require_relative 'mobily_sms'
@@ -8,17 +10,29 @@ require_relative 'mobily_api_error'
 
 class Sms
 
-  USERNAME = Rails.application.secrets.mobilyws[:username]
-  PASSWORD = Rails.application.secrets.mobilyws[:password]
-  SMSHOST  = Rails.application.secrets.mobilyws[:smshost]
+  # class << self
+  #   attr_accessor :configuration
+  # end
+  #
+  # def self.configuration
+  #   @configuration ||= Configuration.new
+  # end
+  #
+  # def self.reset
+  #   @configuration = Configuration.new
+  # end
+  #
+  # def self.configure
+  #   yield(configuration)
+  # end
 
   def self.send(recipient_mobile, message)
     if check_can_send
       begin
-        sms = MobilySMS.new(MobilyApiAuth.new(USERNAME, PASSWORD))
+        sms = MobilySMS.new( $mobily_credentials )
         sms.add_number(recipient_mobile)
 
-        sms.sender = SMSHOST
+        sms.sender = $smshost
 
         sms.msg = message
         sms.send
@@ -40,7 +54,7 @@ class Sms
   def self.schedule(mobile, password, recipient_mobile)
     sms = MobilySMS.new(MobilyApiAuth.new(mobile, password))
     sms.add_number(recipient_mobile)
-    sms.sender = SMSHOST
+    sms.sender = $smshost
     sms.msg = 'Testing تجريب ^&**\nFrom Ruby, scheduled'
     sms.schedule_to_send_on(25, 12, 2020, 12, 0, 0)
     sms.delete_key = '666'
@@ -50,7 +64,7 @@ class Sms
   def self.send_formatted(mobile, password, recipient_one, recipient_two)
     auth = MobilyApiAuth.new(mobile, password)
     msg = 'Hi (1), your subscription will end on (2).'
-    sms = MobilyFormattedSMS.new(auth, [recipient_one, recipient_two], SMSHOST)
+    sms = MobilyFormattedSMS.new(auth, [recipient_one, recipient_two], $smshost)
 
     sms.add_variable_for_number(recipient_one, '(1)', 'Martin')
     sms.add_variable_for_number(recipient_one, '(2)', '31/12/2017')
@@ -63,7 +77,7 @@ class Sms
     auth = MobilyApiAuth.new(mobile, password)
     msg = 'Hi (1), your subscription will end on (2)..'
 
-    sms = MobilyFormattedSMS.new(auth, [recipient_one, recipient_two], SMSHOST, msg )
+    sms = MobilyFormattedSMS.new(auth, [recipient_one, recipient_two], $smshost, msg )
 
     sms.add_variable_for_number(recipient_one, '(1)', 'Lee')
     sms.add_variable_for_number(recipient_one, '(2)', '31/11/2019')
