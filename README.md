@@ -36,7 +36,7 @@ PASSWORD = `TODO: add your password from mobily.we`
 $mobily_credentials = MobilyApiAuth.new( USERNAME, PASSWORD)
 ```
 
-Here we go, now qw can send our message
+Here we go, now we can send our message
 
 ```
 Sms.send('967xxxxxxxxx', 'Hey, Mobily.ws service integrated successfully')
