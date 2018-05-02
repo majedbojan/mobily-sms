@@ -26,7 +26,15 @@ $ gem install mobily-sms
 
 ## Usage
 
-TODO: Write usage instructions here
+After installing the gem create file in `config/initializers/mobily_credentials.rb` and called it `mobily_credentials.rb` then copy these lines
+
+```
+$smshost = `Please put your sender name from mobily.we`
+
+USERNAME = 'Please put your username from mobily.we'
+PASSWORD = `Please put your password from mobily.we`
+$mobily_credentials = MobilyApiAuth.new( USERNAME, PASSWORD)
+```
 
 ## Development
 
