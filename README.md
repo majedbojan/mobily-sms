@@ -36,6 +36,12 @@ PASSWORD = `TODO: add your password from mobily.we`
 $mobily_credentials = MobilyApiAuth.new( USERNAME, PASSWORD)
 ```
 
+Here we go, now qw can send our message
+
+```
+Sms.send('967xxxxxxxxx', 'Hey, Mobily.ws service integrated successfully')
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
